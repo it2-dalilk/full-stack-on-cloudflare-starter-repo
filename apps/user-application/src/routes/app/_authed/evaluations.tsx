@@ -5,7 +5,7 @@ export const Route = createFileRoute("/app/_authed/evaluations")({
   component: RouteComponent,
   loader: async ({ context }) => {
     await context.queryClient.prefetchQuery(
-      context.trpc.evaluations.recentEvaluations.queryOptions(),
+      context.trpc.evaluations.recentEvaluations.queryOptions()
     );
   },
 });
